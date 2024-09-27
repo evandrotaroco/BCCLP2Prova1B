@@ -8,6 +8,7 @@ import {listaCandidatos} from "../../dados/candidatos";
 export default function TelaPrincipal(props) {
     const [detalharCandidato, setDetalharCandidato]=useState(false);
     const [atualizarCurtida, setAtualizarCurtida] = useState(0);
+    const [adicionarQuestionamento, setAdicionarQuestionamento] = useState(false);
     const [candidatoSelecionado, setCandidatoSelecionado] = useState({
         id: 1,
         email: "",

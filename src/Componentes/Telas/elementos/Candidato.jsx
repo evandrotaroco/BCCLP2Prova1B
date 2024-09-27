@@ -11,10 +11,6 @@ export default function Candidato(props) {
     function addDescurtida(candidato){
         candidato.descurtidas = candidato.descurtidas+1
         props.setAtualizarCurtida(candidato.descurtidas);
-        if(candidato.curtidas > 0){
-            candidato.curtidas = candidato.curtidas-1
-            props.setAtualizarCurtida(candidato.curtidas);   
-        }
     }
 
     return (
@@ -25,6 +21,7 @@ export default function Candidato(props) {
                 <Card.Text>
                     <p>{"Email: " + props.candidato.email}</p>
                     <p>{"Curtidas: " + props.candidato.curtidas}</p>
+                    <p>{"Descurtidas: " + props.candidato.descurtidas}</p>
                     <p>{"Questionamentos: " + props.candidato.questionamentos}</p>
                 </Card.Text>
                 <Button variant="primary" onClick={() => {
