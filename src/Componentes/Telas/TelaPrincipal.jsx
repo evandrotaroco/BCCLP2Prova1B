@@ -29,6 +29,7 @@ export default function TelaPrincipal(props) {
                                     setDetalharCandidato={setDetalharCandidato}
                                     setCandidatoSelecionado={setCandidatoSelecionado}
                                     candidatoSelecionado={candidatoSelecionado}
+                                    setAdicionarQuestionamento={setAdicionarQuestionamento}
                     />
                 ) : (
                     <GridCandidatos listaCandidatos={listaCandidatos}

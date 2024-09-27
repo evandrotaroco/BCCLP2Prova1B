@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Button } from "react-bootstrap";
+import { Container, Button, Form } from "react-bootstrap";
 
 export default function DetalhesCandidato(props) {
     const [candidato, setCandidato] = useState(props.candidatoSelecionado);
@@ -18,11 +18,16 @@ export default function DetalhesCandidato(props) {
 
                 </div>
             }
-            <Button className="mt-1" variant="primary">
-                    
+            <Button className="mt-1" variant="primary" onClick={() => {
+                        props.setAdicionarQuestionamento(true);
+                    }}>
             Adicionar questionamento</Button> <Button className="mt-1" variant="primary" onClick={() => {
                         props.setDetalharCandidato(false);
+                        props.setAdicionarQuestionamento(false);
                     }}>Voltar</Button>
+            {
+                //tentei fazer o C, mas não consegui pensar em uma lógica!
+            }
         </Container>
     );
 }
